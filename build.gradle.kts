@@ -8,7 +8,7 @@ buildscript {
 
 plugins {
     kotlin("jvm") version "1.3.21"
-    id("io.quarkus.gradle.plugin") version "0.11.0"
+    id("io.quarkus.gradle.plugin") version "0.12.0"
     id("org.jetbrains.kotlin.plugin.allopen") version "1.3.21"
 }
 
@@ -21,12 +21,12 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
-    compileOnly("io.quarkus:quarkus-resteasy:0.11.0")
-    implementation("io.quarkus:quarkus-kotlin:0.11.0")
+    compileOnly("io.quarkus:quarkus-resteasy:0.12.0")
+    implementation("io.quarkus:quarkus-kotlin:0.12.0")
     compileOnly("com.oracle.substratevm:svm:1.0.0-rc12") {
         exclude("*", "*")
     }
-    compileOnly("io.quarkus:quarkus-arc:0.11.0") {
+    compileOnly("io.quarkus:quarkus-arc:0.12.0") {
         exclude("com.oracle.substratevm", "svm")
     }
     implementation("org.jetbrains.intellij.deps:trove4j:1.0.20181211")
